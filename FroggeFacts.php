@@ -1,15 +1,13 @@
 <?php
-function array_random($arr, num = 1) 
-{
+function array_random($arr, $num = 1) {
   shuffle($arr);
   
   $r = array();
-  for ($i = 0; $i < $num; $i++)
-  {
+  for ($i = 0; $i < $num; $i++) {
     $r[] = $arr[$i];
-    }
-  return $num == 1 ? $r[0] : $r;
   }
+  return $num == 1 ? $r[0] : $r;
+}
 $a = array(
 
 "Frogge fact #1: A frogge biþ a smale beastie wip foure leggys, which liueþ boþe in water and on londe.",
@@ -28,8 +26,8 @@ $a = array(
 "Frogge fact #14: Frogges ben breþren wiþ toades. Toades ben muchel lyk froggen wiþ drye þicke sken.", 
 "Frogge fact #15: Some men weenen þat þou micht biyeten weartes of toades, ac þis nis nat trewe."
 
-
-#This text is taken from Incubator Plus 2.0, "wp/enm/frogge", under the CC BY-SA 3.0 license. 
 );
+#This text is taken from Incubator Plus 2.0, "wp/enm/frogge", under the CC BY-SA 3.0 license. 
+
 print_r(array_random($a));
 ?>
